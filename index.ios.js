@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import {
   View,
@@ -88,19 +87,6 @@ class FBLogin extends Component {
     return <RCTMFBLogin {...this.props} style={[styles.base, this.props.style]} />
   }
 }
-
-FBLogin.propTypes = {
-  style: View.propTypes.style,
-  permissions: PropTypes.array, // default: ["public_profile", "email"]
-  loginBehavior: PropTypes.number, // default: Native
-  onLogin: PropTypes.func,
-  onLogout: PropTypes.func,
-  onLoginFound: PropTypes.func,
-  onLoginNotFound: PropTypes.func,
-  onError: PropTypes.func,
-  onCancel: PropTypes.func,
-  onPermissionsMissing: PropTypes.func,
-};
 
 module.exports = {
   FBLogin,
